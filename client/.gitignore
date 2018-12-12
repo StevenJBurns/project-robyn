@@ -135,6 +135,7 @@ test/
 
 ### Vuejs ###
 node_modules
+dist
 
 ### Windows ###
 # Windows thumbnail cache files
