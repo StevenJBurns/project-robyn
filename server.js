@@ -1,5 +1,5 @@
 /* Node & Express Dependencies */
-const path = "path";
+const path = require("path");
 const express = require("express");
 
 /* Local Dependencies */
@@ -14,13 +14,15 @@ const port = process.env.PORT || 4000;
 const server = new express();
 
 /* Start middleware */
+
+/* use Express v4.16 built in body-parser */
+server.use(express.json());
+
 /* use serve-favicon for annoying favicon GET requests */ 
 
 
 /* default root GET routing */
-server.get("/", (req, res, next) => {
-  res.status(200).send('Root GET');
-})
+server.use("/", express.static(path.join(__dirname, "client", "dist")));
 
 /* Start Middleware with local routers */
 server.use("/account", routerAccount);
