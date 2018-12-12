@@ -14,10 +14,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "serve-favicon": "^2.5.0"
   },
   "bugs": {
     "url": "https://github.com/StevenJBurns/project-robyn/issues"
   },
-  "homepage": "https://github.com/StevenJBurns/project-robyn#readme"
+  "homepage": "https://github.com/StevenJBurns/project-robyn#readme",
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  }
 }
