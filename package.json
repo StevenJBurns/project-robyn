@@ -1,0 +1,23 @@
+{
+  "name": "project-robyn-server",
+  "main": "server.js",
+  "version": "0.1.0",
+  "author": "Steven J Burns <stevenjburns@msn.com>",
+  "description": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenJBurns/project-robyn.git"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "bugs": {
+    "url": "https://github.com/StevenJBurns/project-robyn/issues"
+  },
+  "homepage": "https://github.com/StevenJBurns/project-robyn#readme"
+}
