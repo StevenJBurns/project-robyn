@@ -6,8 +6,11 @@ const express = require("express");
 const routerAPI = require("./routing/routerAPI");
 const routerAccount = require("./routing/routerUser");
 
+/* Set up secret .env values */
+require("dotenv").config();
 
-/* Create the Express server object */
+/* Create a port and the Express server object */
+const port = process.env.PORT || 4321;
 const server = new express();
 
 /* Start middleware for annoying favicon GET requests */ 
@@ -16,6 +19,6 @@ const server = new express();
 server.use("/account", routerAccount);
 server.use("/api", routerAPI);
 
-server.listen(process.env.PORT || 8000, () => console.log("HI"));
+server.listen(port, () => console.log(`Server started on port ${port}`));
 
 module.exports = server;
