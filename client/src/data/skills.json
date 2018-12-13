@@ -1,0 +1,40 @@
+[
+  {
+  "title": "red",
+  "skills": [
+    "deep breathing using your han",
+    "shape breathing",
+    "liquid time / glitter jar",
+    "think about you favorite animal",
+    "think about your favorite place",
+    "count slowly",
+    "drink some cold water"]
+  },
+  {
+  "title": "yellow",
+  "skills": [
+    "go for a walk",
+    "do jumping jacks, burpees, wall pushes",
+    "yoga poses",
+    "use a fidget (putty, tangle, stress ball)",
+    "read",
+    "listen to music",
+    "write in a journal",
+    "create some art",
+    "play a game",
+    "write down your worries and throw them away"]
+  },
+  {
+  "title": "blue",
+  "skills": [
+    "read",
+    "listen to music",
+    "write in a journal",
+    "create some art",
+    "play a game",
+    "go for a walk",
+    "do jumping jacks, burpees, wall pushes",
+    "yoga poses",
+    "use a fidget (putty, tangle, stress ball)"]
+  }
+]
