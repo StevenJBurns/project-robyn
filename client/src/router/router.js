@@ -4,23 +4,29 @@ import Router from "vue-router";
 
 /* Local Dependencies */
 import Home from "../views/Home.vue";
-// import About from "../views/About.vue";
+import Start from "../components/Start.vue";
+/* other pages will be lazy-loaded */
 
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/start",
+      name: "start",
+      component: Start
+    },
+    {
+      path: "/about",
+      name: "about",
       component: () => import("../views/About.vue")
       /* Lazy-Loaded route components via code-splitting*/
     },
