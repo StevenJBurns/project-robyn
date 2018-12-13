@@ -7,12 +7,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    mood: null
   },
   mutations: {
-
+    changeMood: () => {},
+    completeMood: () => {}
   },
   actions: {
-
+    
   }
 });
