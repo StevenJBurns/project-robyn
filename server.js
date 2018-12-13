@@ -36,8 +36,8 @@ server.use("/", express.static(path.join(__dirname, "client", "dist")));
 server.use("/account", routerAccount);
 server.use("/api", routerAPI);
 
-/* Catch-All middleware routing that serves up React client for non-API URLs vs a 404 error */
-server.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "dist", "index.html")));
+/* Catch-All middleware routing that serves up the Vue client for non-API URLs vs a 404 error */
+// server.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "dist")));
 
 /* Express catch-all error handler */
 server.use((err, req, res, next) => {
