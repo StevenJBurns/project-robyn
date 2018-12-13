@@ -32,12 +32,12 @@ server.use(favicon(path.join(__dirname, "client", "public", "favicon.ico")));
 /* default root GET routing */
 server.use("/", express.static(path.join(__dirname, "client", "dist")));
 
-/* Start Middleware with local routers */
+/* non-root specific local routers */
 server.use("/account", routerAccount);
 server.use("/api", routerAPI);
 
-/* Catch-All middleware routing that serves up the Vue client for non-API URLs vs a 404 error */
-// server.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "dist")));
+/* Catch-All routing that redirects to the Vue client for non-API URLs instead of 404 error */
+server.get("/*", (req, res) => res.sendFile(path.join(__dirname, "client", "dist", "index.html")));
 
 /* Express catch-all error handler */
 server.use((err, req, res, next) => {
