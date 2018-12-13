@@ -1,0 +1,14 @@
+[
+  {
+    "title": "blue",
+    "feelings": ["sad", "hurt", "disappointed", "tired", "bored"]
+  },
+  {
+    "title": "yellow",
+    "feelings": ["excited", "silly", "restless", "embarrassed", "worried", "scared", "nervous", "anxious"]
+  },
+  {
+    "title": "red",
+    "feelings": ["frustrated", "angry", "annoyed"]
+  }
+]
