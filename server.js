@@ -4,6 +4,7 @@ const express = require("express");
 
 /* External Dependencies */
 const logger = require("morgan");
+const favicon = require("serve-favicon");
 
 /* Local Dependencies */
 const routerAPI = require("./routing/routerAPI.js");
@@ -26,7 +27,7 @@ server.use(logger("dev"));
 server.use(express.json());
 
 /* use serve-favicon for annoying favicon GET requests */ 
-
+server.use(favicon(path.join(__dirname, "client", "public", "favicon.ico")));
 
 /* default root GET routing */
 server.use("/", express.static(path.join(__dirname, "client", "dist")));
@@ -34,6 +35,15 @@ server.use("/", express.static(path.join(__dirname, "client", "dist")));
 /* Start Middleware with local routers */
 server.use("/account", routerAccount);
 server.use("/api", routerAPI);
+
+/* Catch-All middleware routing that serves up React client for non-API URLs vs a 404 error */
+server.get("*", (req, res) => res.sendFile(path.join(__dirname, "client", "dist", "index.html")));
+
+/* Express catch-all error handler */
+server.use((err, req, res, next) => {
+  console.error("catch-all: ", err);
+  res.json({"error": err});
+});
 
 server.listen(port, () => console.log(`Server started on port ${port}`));
 
