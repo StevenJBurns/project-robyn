@@ -20,9 +20,14 @@ export default new Router({
       component: Home
     },
     {
-      path: "/start",
+      path: "/stepper",
       name: "start",
-      component: Start
+      component: () => import("../views/Stepper.vue")
+    },
+    {
+      path: "/history",
+      name: "history",
+      component: () => import("../views/History.vue")
     },
     {
       path: "/about",
