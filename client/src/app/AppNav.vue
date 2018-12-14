@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar app dark color="green lighten-1">
+    <v-toolbar app dark color="green">
       <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer"></v-toolbar-side-icon>
       <v-toolbar-title>Robyn's Project</v-toolbar-title>
     </v-toolbar>
