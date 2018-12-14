@@ -28,7 +28,10 @@
 <script>
   import moods from "@/data/moods.json";
   import skills from "@/data/skills.json";
+  import results from "@/data/results.json";
 
+  /* Combine the different moods from different colors into an ES6 Set object */
+  /* This Set is then spread into an array in the component data for use in buttons */
   let setMoods = new Set();
 
   for (let mood of moods) {
@@ -43,6 +46,8 @@
     data() {
       return {
         moods: [...setMoods],
+        skills,
+        results,
         currentMood: null,
         currentStep: 1
       }
