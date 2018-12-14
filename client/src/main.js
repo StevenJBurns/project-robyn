@@ -1,8 +1,8 @@
-/* Vue, Vuex and Router Dependencies */
+/* Vue, Vuex and Vue Router and Vuetify Dependencies */
 import Vue from "vue";
-import './plugins/vuetify'
 import store from "./vuex/store";
 import router from "./router/router";
+import "./plugins/vuetify";
 
 /* Local Dependencies */
 import App from "./app/App.vue";
