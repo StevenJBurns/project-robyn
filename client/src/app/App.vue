@@ -1,18 +1,22 @@
 <template>
   <main id="app">
-    <nav id="nav">
-      <router-link to="/">HOME</router-link> |
-      <router-link to="/start">START</router-link> |
-      <router-link to="/about">ABOUT</router-link> |
-      <router-link to="/admin">ADMIN</router-link>
-    </nav>
-    <router-view/>
+    <v-app>
+      <AppNav />
+      <v-content>
+        <router-view/>
+      </v-content>
+    </v-app>
   </main>
 </template>
 
 <script>
-  export default {
+  import AppNav from "@/app/AppNav";
 
+  export default {
+    name: "App",
+    components: {
+      AppNav
+    }
   }
 
 </script>
