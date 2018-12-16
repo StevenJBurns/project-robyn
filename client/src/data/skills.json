@@ -1,8 +1,8 @@
 [
   {
-  "title": "red",
+  "color": "red",
   "skills": [
-    "deep breathing using your han",
+    "deep breathing using your hand",
     "shape breathing",
     "liquid time / glitter jar",
     "think about you favorite animal",
@@ -11,7 +11,7 @@
     "drink some cold water"]
   },
   {
-  "title": "yellow",
+  "color": "yellow",
   "skills": [
     "go for a walk",
     "do jumping jacks, burpees, wall pushes",
@@ -25,7 +25,7 @@
     "write down your worries and throw them away"]
   },
   {
-  "title": "blue",
+  "color": "blue",
   "skills": [
     "read",
     "listen to music",
