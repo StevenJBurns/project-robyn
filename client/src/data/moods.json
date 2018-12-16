@@ -1,14 +1,46 @@
 [
   {
-    "title": "blue",
-    "feelings": ["sad", "hurt", "disappointed", "tired", "bored"]
+    "color": "blue",
+    "feelings": ["sad", "hurt", "disappointed", "tired", "bored"],
+    "skills": [
+      "read",
+      "listen to music",
+      "write in a journal",
+      "create some art",
+      "play a game",
+      "go for a walk",
+      "do jumping jacks, burpees, wall pushes",
+      "yoga poses",
+      "use a fidget (putty, tangle, stress ball)"
+    ]
   },
   {
-    "title": "yellow",
-    "feelings": ["excited", "silly", "restless", "embarrassed", "worried", "scared", "nervous", "anxious"]
+    "color": "yellow",
+    "feelings": ["excited", "silly", "restless", "embarrassed", "worried", "scared", "nervous", "anxious"],
+    "skills": [
+      "go for a walk",
+      "do jumping jacks, burpees, wall pushes",
+      "yoga poses",
+      "use a fidget (putty, tangle, stress ball)",
+      "read",
+      "listen to music",
+      "write in a journal",
+      "create some art",
+      "play a game",
+      "write down your worries and throw them away"
+    ]
   },
   {
-    "title": "red",
-    "feelings": ["frustrated", "angry", "annoyed"]
+    "color": "red",
+    "feelings": ["frustrated", "angry", "annoyed"],
+    "skills": [
+      "deep breathing using your hand",
+      "shape breathing",
+      "liquid time / glitter jar",
+      "think about you favorite animal",
+      "think about your favorite place",
+      "count slowly",
+      "drink some cold water"
+    ]
   }
 ]
