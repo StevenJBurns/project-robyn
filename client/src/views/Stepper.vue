@@ -4,22 +4,25 @@
     <v-stepper-content step="1">
       <v-list>
         <v-list-tile v-for="(mood, index) in moods" :key="index">
-          <v-btn :dark="mood.color !== 'yellow'" :class="mood.color" @click="setMood(mood.mood)">{{ mood.mood }}</v-btn>
+          <v-btn :dark="mood.color !== 'yellow'" :class="mood.color" @click="setMood(mood)">{{ mood.mood }}</v-btn>
         </v-list-tile>
       </v-list>
-      <!-- <v-btn color="green" dark>Continue</v-btn> -->
-      <!-- <v-btn @click="currentStep -= 1" flat>Cancel</v-btn> -->
     </v-stepper-content>
 
     <v-stepper-step step="2">Recommended Actions</v-stepper-step>
     <v-stepper-content step="2">
+      <v-list>
+        <v-list-tile v-for="(skill, index) in currentSkills" :key="index">
+          <v-btn :dark="currentColor !== 'yellow'" :class="currentColor" @click="setSkill(skill)">{{ skill }}</v-btn>
+        </v-list-tile>
+      </v-list>
       <v-btn @click="currentStep = 3" color="green">Continue</v-btn>
       <v-btn @click="currentStep = 1" flat>Cancel</v-btn>
     </v-stepper-content>
 
     <v-stepper-step step="3">How do you feel now?</v-stepper-step>
     <v-stepper-content step="3">
-      <v-btn  color="green">Continue</v-btn>
+      <v-btn color="green">Continue</v-btn>
       <v-btn @click="currentStep = 2" flat>Cancel</v-btn>
     </v-stepper-content>
   </v-stepper>
@@ -31,16 +34,15 @@
   import results from "@/data/results.json";
 
   /* Combine the different moods from different colors into an ES6 Set object */
+  /* This creates an array-like Set object containing only distinct values */
   /* This Set is then spread into an array in the component data for use in buttons */
   let setMoods = new Set();
 
   for (let mood of moods) {
     for (let feeling of mood.feelings) {
-      setMoods.add({ mood: feeling, color: mood["title"]});
+      setMoods.add({ mood: feeling, color: mood["color"], skills: mood["skills"]});
     }
   }
-
-  // console.log(setMoods.entries);
 
   export default {
     data() {
@@ -49,16 +51,26 @@
         skills,
         results,
         currentMood: null,
+        currentColor: null,
+        currentSkills: null,
+        selectedSkill: null,
         currentStep: 1
       }
     },
     methods: {
       setMood: function(mood) {
-        console.log("current mood: ", this.currentStep);
-        this.currentMood = mood;
+        console.log("mood: ", mood);
+        this.currentMood = mood.mood;
+        this.currentColor = mood.color;
+        this.currentSkills = mood.skills;
+
+        console.log(this.currentSkills);
+        
         this.currentStep = 2;
-        console.log("current mood: ", this.currentMood);
-        console.log("current step: ", this.currentStep);
+      },
+      setSkill: function (skill) {
+        // this.currentSkills = skill
+        this.currentStep = 3;
       }
     }
   }
