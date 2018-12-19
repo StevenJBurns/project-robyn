@@ -6,14 +6,19 @@ import Vuex from "vuex";
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  strict: true,
   state: {
-    mood: null
+    currentMood: null
+  },
+  getters: {
+
   },
   mutations: {
     changeMood: () => {},
     completeMood: () => {}
   },
   actions: {
-    
+    changeMood: () => {},
+    completeMood: () => {}
   }
 });
