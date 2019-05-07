@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/StevenJBurns/project-robyn#readme",
   "devDependencies": {
-    "dotenv": "^7.0.0"
+    "dotenv": "^8.0.0"
   }
 }
