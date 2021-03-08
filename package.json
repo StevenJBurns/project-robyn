@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
+    "morgan": "^1.10.0",
     "serve-favicon": "^2.5.0"
   },
   "bugs": {
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/StevenJBurns/project-robyn#readme",
   "devDependencies": {
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.2.0"
   }
 }
